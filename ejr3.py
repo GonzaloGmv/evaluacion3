@@ -48,3 +48,12 @@ def mas_tripulacion():
             solucion = i[nombre]
     print(solucion)
 mas_tripulacion()
+
+def at():
+    nombre = keys.index('Nombre')
+    for i in filas:
+        nave = i[0]
+        if nave[:2] == 'AT':
+            print(nave)
+
+at()
