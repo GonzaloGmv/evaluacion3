@@ -35,3 +35,16 @@ def mas_pasajeros():
     print(solucion)
 
 mas_pasajeros()
+
+def mas_tripulacion():
+    nombre = keys.index('Nombre')
+    tripulacion = keys.index('Tripulacion')
+    lista = []
+    for i in filas:
+        lista.append(int(i[tripulacion]))
+    maxim = max(lista)
+    for i in filas:
+        if int(i[tripulacion])==maxim:
+            solucion = i[nombre]
+    print(solucion)
+mas_tripulacion()
