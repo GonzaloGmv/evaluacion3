@@ -1,25 +1,12 @@
 import csv
 
-filas = []
-with open('naves.csv', 'r') as f:
-    reader = csv.reader(f)
-    
-    for i in reader:
-        if i[0] == 'Nombre':
-            keys = i
-            del i
-        else:
-            filas.append(i)
-
-def info(nave):
+def info(nave, keys, filas):
     nombre = keys.index('Nombre')
     for i in filas:
         if i[nombre] == nave:
             print(i)
-info("Halcon Milenario")
-info("Estrella de la Muerte")
 
-def mas_pasajeros():
+def mas_pasajeros(keys, filas):
     nombre = keys.index('Nombre')
     capacidad = keys.index('Capacidad')
     solucion = []
@@ -33,9 +20,8 @@ def mas_pasajeros():
             if int(i[capacidad])==lista[j]:
                 solucion.append(i[nombre])
     print(solucion)
-mas_pasajeros()
 
-def mas_tripulacion():
+def mas_tripulacion(keys, filas):
     nombre = keys.index('Nombre')
     tripulacion = keys.index('Tripulacion')
     lista = []
@@ -46,16 +32,14 @@ def mas_tripulacion():
         if int(i[tripulacion])==maxim:
             solucion = i[nombre]
     print(solucion)
-mas_tripulacion()
 
-def at():
+def at(filas):
     for i in filas:
         nave = i[0]
         if nave[:2] == 'AT':
             print(nave)
-at()
 
-def pasajeros():
+def pasajeros(keys, filas):
     nombre = keys.index('Nombre')
     capacidad = keys.index('Capacidad')
     solucion = []
@@ -68,9 +52,8 @@ def pasajeros():
             if int(i[capacidad])==lista[j]:
                 solucion.append(i[nombre])
     print(solucion)
-pasajeros()
 
-def ordenar():
+def ordenar(keys, filas):
     largo = keys.index('Largo')
     lista = []
     for i in filas:
@@ -80,4 +63,3 @@ def ordenar():
         for j in filas:
             if float(j[largo])==lista[i]:
                 print(j)
-ordenar()
