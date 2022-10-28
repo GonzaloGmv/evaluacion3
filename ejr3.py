@@ -12,9 +12,26 @@ with open('naves.csv', 'r') as f:
             filas.append(i)
 
 def info(nave):
-    indice = keys.index('Nombre')
+    nombre = keys.index('Nombre')
     for i in filas:
-        if i[indice] == nave:
+        if i[nombre] == nave:
             print(i)
 info("Halcon Milenario")
 info("Estrella de la Muerte")
+
+def mas_pasajeros():
+    nombre = keys.index('Nombre')
+    capacidad = keys.index('Capacidad')
+    solucion = []
+    lista = []
+    for i in filas:
+        lista.append(int(i[capacidad]))
+    for i in range(len(lista)-5):
+        lista.remove(min(lista))
+    for i in filas:
+        for j in range(len(lista)):
+            if int(i[capacidad])==lista[j]:
+                solucion.append(i[nombre])
+    print(solucion)
+
+mas_pasajeros()
