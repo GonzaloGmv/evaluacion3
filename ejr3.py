@@ -11,7 +11,10 @@ with open('naves.csv', 'r') as f:
         else:
             filas.append(i)
 
-
-print(keys)
-for i in range(len(filas)):
-    print(filas[i])
+def info(nave):
+    indice = keys.index('Nombre')
+    for i in filas:
+        if i[indice] == nave:
+            print(i)
+info("Halcon Milenario")
+info("Estrella de la Muerte")
