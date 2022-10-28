@@ -49,7 +49,6 @@ def mas_tripulacion():
 mas_tripulacion()
 
 def at():
-    nombre = keys.index('Nombre')
     for i in filas:
         nave = i[0]
         if nave[:2] == 'AT':
@@ -70,3 +69,16 @@ def pasajeros():
                 solucion.append(i[nombre])
     print(solucion)
 pasajeros()
+
+def ordenar():
+    nombre = keys.index('Nombre')
+    largo = keys.index('Largo')
+    lista = []
+    for i in filas:
+        lista.append(float(i[largo]))
+    lista.sort()
+    for i in range(len(lista)):
+        for j in filas:
+            if float(j[largo])==lista[i]:
+                print(j)
+ordenar()
