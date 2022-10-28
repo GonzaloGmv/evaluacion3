@@ -71,7 +71,6 @@ def pasajeros():
 pasajeros()
 
 def ordenar():
-    nombre = keys.index('Nombre')
     largo = keys.index('Largo')
     lista = []
     for i in filas:
