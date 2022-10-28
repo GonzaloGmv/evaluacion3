@@ -33,7 +33,6 @@ def mas_pasajeros():
             if int(i[capacidad])==lista[j]:
                 solucion.append(i[nombre])
     print(solucion)
-
 mas_pasajeros()
 
 def mas_tripulacion():
@@ -55,5 +54,19 @@ def at():
         nave = i[0]
         if nave[:2] == 'AT':
             print(nave)
-
 at()
+
+def pasajeros():
+    nombre = keys.index('Nombre')
+    capacidad = keys.index('Capacidad')
+    solucion = []
+    lista = []
+    for i in filas:
+        if int(i[capacidad]) >= 6:
+            lista.append(int(i[capacidad]))
+    for i in filas:
+        for j in range(len(lista)):
+            if int(i[capacidad])==lista[j]:
+                solucion.append(i[nombre])
+    print(solucion)
+pasajeros()
