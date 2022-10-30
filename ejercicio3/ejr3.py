@@ -1,5 +1,3 @@
-import csv
-
 def info(nave, keys, filas):
     nombre = keys.index('Nombre')
     for i in filas:
