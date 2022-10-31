@@ -11,7 +11,7 @@ def determinante_recursivo(matriz, i, solucion):
         determinante_recursivo(matriz, i+1, solucion - matriz[0][1] * matriz[1][0] * matriz[2][2])
     elif i == 5:
         solucion = solucion - matriz[0][0] * matriz[2][1] * matriz[1][2]
-        return solucion
+        print(solucion)
 
 def determinante_iterativo(matriz):
     solucion = 0
