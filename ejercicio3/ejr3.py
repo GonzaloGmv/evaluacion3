@@ -57,7 +57,8 @@ def ordenar(keys, filas):
     for i in filas:
         lista.append(float(i[largo]))
     lista.sort()
-    for i in range(len(lista)):
-        for j in filas:
-            if float(j[largo])==lista[i]:
-                print(j)
+    for i in filas:
+        if float(i[largo])==lista[0]:
+            print("La nave mas pequeña es", i)
+        elif float(i[largo])==lista[-1]:
+            print("La nave mas grande es", i)
