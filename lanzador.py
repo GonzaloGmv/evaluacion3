@@ -33,4 +33,8 @@ def main():
         print( '\n mostrar toda la información de la nave más pequeña y la más grande')
         ordenar(keys, filas)
     elif ejr == '5':
-        print(ejr5_1())
+        print("\nApartado 1 \n")
+        ejr5_1(input('Escriba el mensaje que desea codificar (se mostraran solo los 8 primeros caracteres): '))
+        print("\nApartado 2 \n")
+        mensaje = input("Escriba el mensaje que desea codificar y posteriormente descodificar, siempre que el codigo ASCII de sus caracteres este entre el 32 y el 125: ")
+        ejr5_2_desencriptar(ejr5_2_encriptar(mensaje))
