@@ -2,7 +2,7 @@ def info(nave, keys, filas):
     nombre = keys.index('Nombre')
     for i in filas:
         if i[nombre] == nave:
-            print(i)
+            return i
 
 def mas_pasajeros(keys, filas):
     nombre = keys.index('Nombre')
@@ -17,7 +17,7 @@ def mas_pasajeros(keys, filas):
         for j in range(len(lista)):
             if int(i[capacidad])==lista[j]:
                 solucion.append(i[nombre])
-    print(solucion)
+    return solucion
 
 def mas_tripulacion(keys, filas):
     nombre = keys.index('Nombre')
@@ -29,7 +29,7 @@ def mas_tripulacion(keys, filas):
     for i in filas:
         if int(i[tripulacion])==maxim:
             solucion = i[nombre]
-    print(solucion)
+    return solucion
 
 def at(filas):
     for i in filas:
@@ -49,7 +49,7 @@ def pasajeros(keys, filas):
         for j in range(len(lista)):
             if int(i[capacidad])==lista[j]:
                 solucion.append(i[nombre])
-    print(solucion)
+    return solucion
 
 def ordenar(keys, filas):
     largo = keys.index('Largo')
