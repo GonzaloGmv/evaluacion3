@@ -7,7 +7,7 @@ def main():
     ejr = input("Escriba el numero del ejercicio que desea ejecutar: ")
     if ejr == '2':
         matriz2 = [[4,-1,3],[2,-1,4],[1,2,3]]
-        determinante_iterativo(matriz2)
+        print(determinante_iterativo(matriz2))
         determinante_recursivo(matriz2, 0, 0)
     elif ejr == '3':
         filas = []
